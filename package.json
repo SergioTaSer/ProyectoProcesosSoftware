@@ -1,0 +1,18 @@
+{
+  "name": "proyectoprocesossoftware",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "testW": "node_modules\\.bin\\jasmine servidor\\modeloSpec.js",
+    "test": "./node_modules/.bin/jasmine servidor"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3"
+  },
+  "devDependencies": {
+    "jasmine": "^5.1.0"
+  }
+}
