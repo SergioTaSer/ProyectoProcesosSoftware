@@ -4,12 +4,19 @@ function ClienteRest(){
     this.agregarUsuario=function(nick){
         var cliente=this;
         $.getJSON("/agregarUsuario/"+nick,function(data){ 
+            let msg="";
             if (data.nick!=-1){
                 console.log("Usuario "+nick+" ha sido registrado")
+                msg = "Bienvenido "+nick+"!";
+                $.cookie("nick",nick);
+                cw.limpiar();
             }
             else{
                 console.log("El nick "+nick+" está en uso");
+                msg = "El nick "+nick+" está en uso";
             }
+    
+            cw.mostrarMensaje(msg);
         })
     }
 
